@@ -29,16 +29,18 @@ const server = http.createServer((req,res)=>{
             console.log(chunk)
             body.push(chunk)
         })
-        req.on('end',()=>{
+        return req.on('end',()=>{
             const bodyPareser = Buffer.concat(body).toString();
             console.log(bodyPareser)
             const message = bodyPareser.split('=')[1]
-            fs.writeFileSync('datafromClient.txt',message)
+            fs.writeFile('datafromClient.txt',message,(err)=>{
+
+                res.statusCode =302;
+                res.setHeader('Location','/')
+                return res.end();
+            })
             
         })
-        res.statusCode =302;
-        res.setHeader('Location','/')
-        return res.end();
     }
 
 
