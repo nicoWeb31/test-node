@@ -2,7 +2,7 @@ const fs = require('fs')
 
 
 
-const requestHandler = (req,res) =>{
+module.exports.toto  = (req,res) =>{
 
     const url = req.url
     const methode =req.method
@@ -46,4 +46,7 @@ const requestHandler = (req,res) =>{
     res.write('</html>')
     res.end();
 }
+
+
+
 
