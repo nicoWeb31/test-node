@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/nicoWeb31/test-node/issues"
   },
-  "homepage": "https://github.com/nicoWeb31/test-node#readme"
+  "homepage": "https://github.com/nicoWeb31/test-node#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.5"
+  }
 }

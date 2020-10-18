@@ -10,7 +10,7 @@ module.exports.toto  = (req,res) =>{
     if(url === '/'){
         res.setHeader('Content-Type','text/html');
         res.write('<html>')
-        res.write('<head><title>toto</title></head>')
+        res.write('<head><title>toto va au tibet</title></head>')
         res.write('<body><form action="/message" method="POST"><input type="text" name="message"/><button type="submit">submit</button></form></body>')
     
         res.write('</html>')
